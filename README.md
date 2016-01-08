@@ -6,11 +6,17 @@ based on a JSON configuration.
 
 ## Configuration
 
+### Rabbit Host
+
 The container uses environment variables to configure RabbitMQ:
 
 | Variable    | Meaning |
 |-------------|---------|
 | RABBIT_HOST | The RabbitMQ host (e.g. 192.168.0.1) |
+
+At present, the default Rabbit ports are used.
+
+### Creating Exchanges
 
 To define exchanges, you will need to supply a rabbit.json file by adding a volume definition
 for /etc/exchanges
