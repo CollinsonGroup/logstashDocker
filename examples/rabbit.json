@@ -1,0 +1,18 @@
+{
+	"exchanges": [
+		{
+			"name": "client_operations",
+			"vhost": "/",
+			"type": "fanout",
+			"durable": "true",
+			"internal": "false"
+		},
+        {
+            "name": "my_test_exchange",
+            "vhost": "/",
+			"type": "fanout",
+			"durable": "true",
+			"internal": "false"
+        }
+    ]
+}

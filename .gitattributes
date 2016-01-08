@@ -1,0 +1,2 @@
+**/*.sh eof=lf
+**/*.py eof=lf
