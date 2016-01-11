@@ -1,2 +1,3 @@
 **/*.sh eof=lf
 **/*.py eof=lf
+**/*.tmpl eol=lf
