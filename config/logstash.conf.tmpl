@@ -1,0 +1,23 @@
+input {
+  rabbitmq {
+    host => "@rabbitHost"
+    port => "@rabbitPort"
+    user => "@rabbitUsername"
+    password => "@rabbitPassword"
+    queue => "logstash"
+    durable => true
+    exchange => "@rabbitExchange"
+  }
+}
+
+filter {
+  json {
+    source => "message"
+	}
+}
+
+output {
+  elasticsearch {
+    hosts => "@elasticsearchHost"
+  }
+}
