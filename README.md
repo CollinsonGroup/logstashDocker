@@ -31,7 +31,7 @@ the following form:
 			"name": "exchange_name",
             ...
 		}
-    ] 
+    ]
 }
 ```
 
@@ -47,7 +47,7 @@ Allowed variables are as follows:
 
 These are essentially the same options as Rabbit's own queue definition mechanism.
 
-## Creating the container
+## Creating the Container
 
 To build the container, use Docker build:
 
@@ -55,3 +55,22 @@ To build the container, use Docker build:
 > docker build -t collinsongroup/logstash .
 ```
 
+## Running the Container
+
+The container takes several environment variables to configure it for use:
+
+| Variable           | Meaning                                        | Default           |
+|--------------------|------------------------------------------------|-------------------|
+| RABBIT_HOST        | Hostname or IP for the Rabbit instance         | localhost         |
+| RABBIT_PORT        | Port Rabbit is listening on                    | 5672              |
+| RABBIT_EXCHANGE    | Name of the Exchange to use                    | client_operations |
+| RABBIT_USERNAME    | User to connect to Rabbit with                 | guest             |
+| RABBIT_PASSWORD    | Password for Rabbit user                       | guest             |
+| ELASTICSEARCH_HOST | Hostname or IP of the Elasticseach instance    | elasticseach      |
+| ELASTICSEARCH_PORT | Port Elasticsearch listens on                  | 9200              |
+
+You can specify the vaslues you want to change as part of the **Docker Run** command:
+
+```bash
+> docker run -d -e RABBIT_HOST=10.10.1.2 -e RABBIT_PORT=9999 --name myLogstash collinsongroup/logstash
+```
