@@ -1,5 +1,9 @@
 #!/bin/bash
 set -e
-python /create_exchange/createExchanges.py /etc/exchanges/rabbit.json
+echo Configuring Exchanges
+python /configScripts/createExchanges.py /etc/exchanges/rabbit.json
 
-exec /docker-entrypoint.sh "$@"
+echo Configuring Logstash
+python /configScripts/createLogstashConfig.py
+
+/docker-entrypoint.sh $@
