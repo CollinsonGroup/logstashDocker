@@ -19,7 +19,7 @@ At present, the default Rabbit ports are used.
 ### Creating Exchanges
 
 To define exchanges, you will need to supply a rabbit.json file by adding a volume definition
-for /etc/exchanges
+for **/etc/exchanges/rabbit.json**. It is only the **rabbit.json** file that's required. Other files are in that folder so if you mount all of it, the container will likely fail.
 
 An example rabbit.json file is given in the ```./examples``` folder. Typically a configuration takes
 the following form:
@@ -72,5 +72,5 @@ The container takes several environment variables to configure it for use:
 You can specify the vaslues you want to change as part of the **Docker Run** command:
 
 ```bash
-> docker run -d -e RABBIT_HOST=10.10.1.2 -e RABBIT_PORT=9999 --name myLogstash collinsongroup/logstash
+> docker run -d -e RABBIT_HOST=10.10.1.2 -e RABBIT_PORT=9999 -v $(pwd)/examples:/etc/exchanges --name myLogstash collinsongroup/logstash
 ```

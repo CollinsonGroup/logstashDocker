@@ -4,7 +4,8 @@ MAINTAINER Matt Kimber <matt.kimber@collinsongroup.com>
 COPY src /configScripts
 COPY config /etc/exchanges
 
-RUN mkdir -p /etc/logstash/conf.d/ \
+RUN chmod +x /configScripts/start.sh \
+    && mkdir -p /etc/logstash/conf.d/ \
     && cd /configScripts \
     && apt-get update \
     && apt-get install -y python-pip \
