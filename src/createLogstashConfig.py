@@ -12,6 +12,7 @@ templateValues = {
     'rabbitUsername': os.getenv('RABBIT_USERNAME', "guest"),
     'rabbitPassword': os.getenv('RABBIT_PASSWORD', "guest"),
     'rabbitExchange': os.getenv('RABBIT_EXCHANGE', 'client_exchange'),
+    'rabbitQueue': os.getenv('RABBIT_QUEUE', 'logstash'),
     'elasticsearchHost': elasticsearchHost + ':' + elasticsearchPort
     }
 
