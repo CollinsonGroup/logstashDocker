@@ -16,6 +16,7 @@ RUN chmod +x /configScripts/start.sh \
 ENV RABBIT_HOST=localhost
 ENV RABBIT_PORT=5672
 ENV RABBIT_EXCHANGE=client_operations
+ENV RABBIT_QUEUE=logstash
 ENV RABBIT_USERNAME=guest
 ENV RABBIT_PASSWORD=guest
 ENV ELASTICSEARCH_HOST=elasticsearch

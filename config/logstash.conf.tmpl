@@ -4,7 +4,7 @@ input {
     port => "@rabbitPort"
     user => "@rabbitUsername"
     password => "@rabbitPassword"
-    queue => "logstash"
+    queue => "@rabbitQueue"
     durable => true
     exchange => "@rabbitExchange"
   }

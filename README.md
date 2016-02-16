@@ -64,6 +64,7 @@ The container takes several environment variables to configure it for use:
 | RABBIT_HOST        | Hostname or IP for the Rabbit instance         | localhost         |
 | RABBIT_PORT        | Port Rabbit is listening on                    | 5672              |
 | RABBIT_EXCHANGE    | Name of the Exchange to use                    | client_operations |
+| RABBIT_QUEUE       | Name of the Rabbit queue to use                | logstash          |
 | RABBIT_USERNAME    | User to connect to Rabbit with                 | guest             |
 | RABBIT_PASSWORD    | Password for Rabbit user                       | guest             |
 | ELASTICSEARCH_HOST | Hostname or IP of the Elasticseach instance    | elasticseach      |
